@@ -1,4 +1,0 @@
-streamlit>=1.36
-openai>=1.40
-pypdf>=4.2
-numpy>=1.26
