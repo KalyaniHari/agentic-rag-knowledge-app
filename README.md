@@ -37,6 +37,22 @@ relevant context, and supports conversational memory.
 └── requirements.txt
 ```
 
+## Architecture
+
+```mermaid
+flowchart LR
+    D[Documents] --> I[Ingest & chunk]
+    I --> E[Embeddings]
+    E --> V[(ChromaDB)]
+    Q[User question] --> R[Retriever]
+    V --> R
+    R --> P[Prompt + context]
+    P --> L[OpenAI LLM]
+    L --> A[Answer]
+```
+
+**Skills demonstrated:** document ingestion & chunking, embeddings, vector retrieval (ChromaDB), prompt construction, and LLM orchestration with LangChain.
+
 ## Setup
 
 ```bash
