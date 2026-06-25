@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+llmapp/
+.env
+vector_db/
+chroma*/
+*.sqlite3
+.ipynb_checkpoints/
+.DS_Store
