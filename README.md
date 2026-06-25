@@ -37,6 +37,27 @@ relevant context, and supports conversational memory.
 └── requirements.txt
 ```
 
+## 🚀 Live Demo — Chat with your Documents
+
+An interactive RAG demo lives in [`streamlit_app.py`](streamlit_app.py): upload a
+PDF, ask questions, and get answers **with inline source citations** (file + page).
+It uses a *bring-your-own-key* design — you paste your own OpenAI key, so it's free
+to host publicly and never exposes a secret.
+
+<!-- After deploying, add your live link here: -->
+<!-- **▶️ Try it live:** https://your-app.streamlit.app -->
+
+**Run locally**
+```bash
+pip install -r requirements-streamlit.txt
+streamlit run streamlit_app.py
+```
+
+**Pipeline:** PDF → page-aware chunking → OpenAI embeddings → in-memory cosine
+retrieval → grounded answer with `[n]` citations. The system prompt forbids
+answering outside the retrieved context, reducing hallucination.
+
+
 ## Architecture
 
 ```mermaid
